@@ -1,19 +1,70 @@
 {% extends "base.html" %}
 {% block title %} LOGIN {% endblock %}
 
-{%block content %} 
-<form method="POST" class="signin">
-    <h3 align="center">LOGIN</h3>
-    <div class="form-group">
-        <label for="email">EMAIL ADDRESS</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="ENTER EMAIL"/>
-     
-        <label for="password">PASSWORD</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="ENTER PASSWORD"/>
-        
+{%block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="../static/sketch/Onboarding1.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../static/sketch/Onboarding2.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../static/sketch/Onboarding3.png" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../static/sketch/Onboarding4.png" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
     </div>
-    <br>
-    <button type="submit" class="btn btn-primary">LOGIN</button>
-</form>
+    <div class="col">
+        <form method="POST" class="signin">
+            <h3 align="center">LOGIN</h3>
+            <div class="form-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="ENTER EMAIL"/>
+             
+                <label for="password">PASSWORD</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="ENTER PASSWORD"/>
+                
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">LOGIN</button>
+        </form>
+
+        <form method="POST" class="signin" id="signupform" style="display: none;">
+            <h3 align="center">SIGN UP</h3>
+            <div class="form-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" class="" id="email" name="email" placeholder="ENTER EMAIL"/>
+                <label for="firstName">FIRST NAME</label>
+                <input type="text" class="" id="firstName" name="firstName" placeholder="FIRST NAME"/>
+                <label for="password1">PASSWORD</label>
+                <input type="password" class="" id="password1" name="password1" placeholder="ENTER PASSWORD"/>
+                <label for="password2">REENTER PASSWORD</label>
+                <input type="password" class="" id="password2" name="password2" placeholder="RE-ENTER PASSWORD"/>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </form>
+
+    </div>
+  </div>
+  </div>
+
 
 {% endblock %}
